@@ -1,0 +1,64 @@
+<html>
+
+	<head>
+		<title>Degree Name Generator</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>	
+	</head>
+
+	<body>
+
+ 
+ 		<div class="title">
+ 	 		<br>
+ 	 		<h3><center>DEGREE NAME GENERATOR</center></h3>
+ 		</div>
+
+ 		<div class="text">
+	 		<p>Our accreditation office needs your help!</p>
+
+	 		<p>The last survey was too successful! Now we need to come up with new Degree names!</p>
+
+ 		</div>
+ 
+
+		<br>
+ 
+
+		<div class="button">
+			<button onclick="sentenceLoad()">Find out</button>
+		</div> 
+
+
+
+		<div class="container">
+			<h5></h5>
+		</div>
+
+
+		<script> function sentenceLoad() {
+	
+			//declare arrays
+			var buzzword = ['Artificial Intelligence','Blockchain','Big Data','IoT']; 
+			var clauses = ['for Design','and'];
+			var design = ['Innovation','Management'];    
+			//shuffle through contents of each array, picking one entry per array
+			var randBuzzword = buzzword[Math.floor(Math.random() * buzzword.length)];
+			var randClause = clauses[Math.floor(Math.random() * clauses.length)];
+			var randDesign = design[Math.floor(Math.random() * design.length)];
+			//place the random entry into the appropriate place in the HTML
+			jQuery("h5").html("");
+			jQuery("h5").append(randBuzzword + "&nbsp;");
+			jQuery("h5").append(randClause + "&nbsp;");
+			jQuery("h5").append(randDesign);
+			}
+ 		</script>
+
+ 		<br>
+ 		<br>
+ 		<br>
+ 		<br>
+
+	
+	</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-color: white;
+}
+
+
+h3 {
+	font-family: "Lucida", Lucida, monospace;
+	text-align: left;
+}
+
+.text {
+	font-family: "Lucida", Lucida, monospace;
+	font-size: 11px;
+	text-align: center;
+}
+
+h5 {
+	font-family: "Lucida", Lucida, monospace;
+}
+
+
+.button {
+	text-align: center;
+}
+
+.container {
+	text-align: center;
+}
