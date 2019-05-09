@@ -39,32 +39,56 @@
 		<script> function sentenceLoad() {
 	
 			//declare arrays
+      const buzzwordAdjectives = [
+        'Big',
+        'Computational',
+        'Crowdsourced',
+        'Deep',
+        'Entrepreneurial',
+        'Generative',
+        'Gamified',
+        'Innovative',
+        'Quantum',
+        'Security for',
+        'Interconnected',
+      ]
+
 			const buzzwords = [
         'Architecture',
         'Artificial Intelligence',
         'Big Data',
+        'Bio-Augmentation',
         'Blockchain',
+        'Computer Vision',
+        'Cloud Computing',
+        'Cryogenics',
         'Data Science',
         'Engineer Product Development',
         'Engineering Systems',
+        'Genetic Modification',
+        'Real News',
         'Information Systems',
         'IoT',
         'Quantum Computing',
         'Security',
+        'Smart Dustbins',
       ]; 
 
 			const clauses = [
-        'and',
+        'and a dash of',
         'especially including',
-        'for',
-        'including',
-        'inextricably linked to',
+        'particularly for',
+        'with a hint of',
+        'with absolutely no relation to',
         'with reference to',
+        'with some kinda',
       ];
 
-			const designs = [
+			const endings = [
+        'Collaboration',
         'Design Innovation',
         'Design',
+        'Fake News',
         'Management',
         'Sustainability',
         'The Fourth Wave of Industrialization',
@@ -74,13 +98,10 @@
 			//shuffle through contents of each array, picking one entry per array
 
       const randChoice = (arr) => arr[Math.floor( Math.random() * arr.length )];
-			const [buzzword, clause, design] = [buzzwords, clauses, designs].map(randChoice);
+			const words = [buzzwordAdjectives, buzzwords, clauses, endings].map(randChoice);
 
 			//place the random entry into the appropriate place in the HTML
-			jQuery("h5").html("");
-			jQuery("h5").append(buzzword + "&nbsp;");
-			jQuery("h5").append(clause + "&nbsp;");
-			jQuery("h5").append(design);
+			jQuery("h5").html(words.join(' '))
 			}
  		</script>
 
