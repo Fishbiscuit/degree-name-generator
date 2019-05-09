@@ -39,18 +39,48 @@
 		<script> function sentenceLoad() {
 	
 			//declare arrays
-			var buzzword = ['Artificial Intelligence','Blockchain','Big Data','IoT','Engineering Systems','Engineer Product Development','Information Systems','Architecture']; 
-			var clauses = ['for','and'];
-			var design = ['Design','Design Innovation','Management'];    
+			const buzzwords = [
+        'Architecture',
+        'Artificial Intelligence',
+        'Big Data',
+        'Blockchain',
+        'Data Science',
+        'Engineer Product Development',
+        'Engineering Systems',
+        'Information Systems',
+        'IoT',
+        'Quantum Computing',
+        'Security',
+      ]; 
+
+			const clauses = [
+        'and',
+        'especially including',
+        'for',
+        'including',
+        'inextricably linked to',
+        'with reference to',
+      ];
+
+			const designs = [
+        'Design Innovation',
+        'Design',
+        'Management',
+        'Sustainability',
+        'The Fourth Wave of Industrialization',
+        'The Future',
+      ];    
+
 			//shuffle through contents of each array, picking one entry per array
-			var randBuzzword = buzzword[Math.floor(Math.random() * buzzword.length)];
-			var randClause = clauses[Math.floor(Math.random() * clauses.length)];
-			var randDesign = design[Math.floor(Math.random() * design.length)];
+
+      const randChoice = (arr) => arr[Math.floor( Math.random() * arr.length )];
+			const [buzzword, clause, design] = [buzzwords, clauses, designs].map(randChoice);
+
 			//place the random entry into the appropriate place in the HTML
 			jQuery("h5").html("");
-			jQuery("h5").append(randBuzzword + "&nbsp;");
-			jQuery("h5").append(randClause + "&nbsp;");
-			jQuery("h5").append(randDesign);
+			jQuery("h5").append(buzzword + "&nbsp;");
+			jQuery("h5").append(clause + "&nbsp;");
+			jQuery("h5").append(design);
 			}
  		</script>
 
