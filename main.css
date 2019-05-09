@@ -1,5 +1,11 @@
+html {
+  height: 100%;
+}
+
 body {
-    background-color: white;
+    background-color: #F6F6F6;
+    height: 100%;
+    margin: 0;
 }
 
 
@@ -16,6 +22,7 @@ h3 {
 
 h5 {
 	font-family: "Lucida", Lucida, monospace;
+  font-size: 20px;
 }
 
 
@@ -23,6 +30,34 @@ h5 {
 	text-align: center;
 }
 
+.button button {
+    border-color: #9C123E;
+    color: #9C123E;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.button button:hover {
+  background-color: #9C123E;
+  color: white;
+  padding: 10px 30px;
+}
+
 .container {
 	text-align: center;
+}
+
+.logo {
+    margin: 0 auto;
+    display: block;
+    height: 100px;
+    padding: 30px;
+}
+
+.title {
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
