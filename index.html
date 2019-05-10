@@ -42,50 +42,63 @@
 	
 			//declare arrays
       const buzzwordAdjectives = [
-        'Big',
+        'Adaptive',
+	'Big',
         'Computational',
         'Crowdsourced',
+	'Decentralised',
         'Deep',
+	'Distributed',
         'Entrepreneurial',
         'Generative',
         'Gamified',
         'Innovative',
+	'Precision',
         'Quantum',
         'Security for',
         'Interconnected',
       ]
-
 			const buzzwords = [
-        'Architecture',
+        '5G Networks',
+	'Architecture',
         'Artificial Intelligence',
+	'Augemented Analytics',
+	'Autonomous Devices',
+	'Aviation Technology',
         'Big Data',
         'Bio-Augmentation',
         'Blockchain',
         'Computer Vision',
         'Cloud Computing',
         'Cryogenics',
+	'Cyber-physical Security',
         'Data Science',
-        'Engineer Product Development',
+	'DevSecAIOps',
+	'Digital Ethics',
+	'Digital Transformation',
+	'Digital Twins',
+	'Edge Computing',
+        'Engineering Product Development',
         'Engineering Systems',
         'Genetic Modification',
         'Real News',
+	'Immserive Experiences',
         'Information Systems',
         'IoT',
+	'Intelligent Interfaces',
         'Quantum Computing',
         'Security',
+	'Smart Cities',
         'Smart Dustbins',
+	'Smart Spaces'
+	'Virtual Reality'
       ]; 
-
 			const clauses = [
-        'and a dash of',
-        'especially including',
-        'particularly for',
-        'with a hint of',
-        'with absolutely no relation to',
-        'with reference to',
-        'with some kinda',
+        'and',
+	'Entrepreneurship, and',
+	'for',
+	'Research, and'
       ];
-
 			const endings = [
         'Collaboration',
         'Design Innovation',
@@ -96,12 +109,9 @@
         'The Fourth Wave of Industrialization',
         'The Future',
       ];    
-
 			//shuffle through contents of each array, picking one entry per array
-
       const randChoice = (arr) => arr[Math.floor( Math.random() * arr.length )];
 			const words = [buzzwordAdjectives, buzzwords, clauses, endings].map(randChoice);
-
 			//place the random entry into the appropriate place in the HTML
 			jQuery("h5").html(words.join(' '))
 			}
