@@ -19,7 +19,9 @@
  		<div class="text">
 	 		<p>Our accreditation office needs your help!</p>
 
-	 		<p>The last survey was too successful! Now we need to come up with new Degree names!</p>
+			 <p>The last survey was too successful! Now we need to come up with new Degree names!</p>
+			 
+			 <p>Now we even have descriptions of our up and coming degrees!</p>
 
  		</div>
  
@@ -31,13 +33,29 @@
 			<button onclick="sentenceLoad()">INNOVATE NOW</button>
 		</div> 
 
-
-
 		<div class="container">
 			<h5></h5>
 		</div>
-
-
+	
+		<div class="description">
+			<h7></h7>
+		</div>
+		<br>
+		<div class="description">
+			<h8></h8>
+		</div>
+		<div class="description">
+			<h9></h9>
+		</div>
+		<div class="description">
+			<h10></h10>
+		</div>
+		<div class="description">
+			<h11></h11>
+		</div>
+		<div class="description">
+			<h12></h12>
+		</div>
 		<script> function sentenceLoad() {
 	
 			//declare arrays
@@ -113,10 +131,17 @@
         'The Future',
       ];    
 			//shuffle through contents of each array, picking one entry per array
-      const randChoice = (arr) => arr[Math.floor( Math.random() * arr.length )];
+      			const randChoice = (arr) => arr[Math.floor( Math.random() * arr.length )];
 			const words = [buzzwordAdjectives, buzzwords, clauses, endings].map(randChoice);
 			//place the random entry into the appropriate place in the HTML
-			jQuery("h5").html(words.join(' '))
+			jQuery("h5").html(words.join(' '));
+			//generates the degree description
+			jQuery("h7").html('This programme aims to create a new breed of '+ words[1] + ' designers and ' + words[3] + ' innovators who are able to harness the power of ' + words[1] + ' to enable ' + words[3] + ' in the space of products, systems, services and built environment.');
+			jQuery("h8").html('It would train graduates with core ' + words[1] + ' skills and ' + words[3] + ' which encompasses the ability to:');
+			jQuery("h9").html('i. apply '+ words[1] +' to '+ words[3] +' in the space of products, services, systems and built environment;');
+			jQuery("h10").html('ii. value-add to '+ words[1] +' processes and services via a ' + words[0] + ' approach');
+			jQuery("h11").html('iii. improve '+ words[0] + ' experiences using digital technologies; and');
+			jQuery("h12" ).html('iv. critically assess the ethical, enviromental, organisational and societal effects of their ' + words[1] + ' AI-enabled solutions or innovations during the design process.')
 			}
  		</script>
 

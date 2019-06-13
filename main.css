@@ -47,6 +47,15 @@ h5 {
 	text-align: center;
 }
 
+.description {
+	font-family: "Lucida", Lucida, monospace;
+	font-size: 16px;
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+}
+
 .logo {
     margin: 0 auto;
     display: block;
